@@ -1,0 +1,20 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import game.cityFactory;
+
+public class cityFactoryTest {
+
+	@Test
+	public void makeCitytest() {
+		cityFactory factory=new cityFactory();
+		for(char i='A';i<='L';i++) {
+			factory.makeCity(i);
+			
+		}
+	}
+
+}

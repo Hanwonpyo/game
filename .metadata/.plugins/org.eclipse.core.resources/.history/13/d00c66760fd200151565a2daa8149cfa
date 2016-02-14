@@ -1,0 +1,9 @@
+package game;
+
+public class cityManager {
+	static private cityManager manager=new cityManager();
+	public void getInstance()
+	{
+		return manager;
+	}
+}

@@ -1,0 +1,31 @@
+package game;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class cityManager {
+	
+	private static landManager manager=new landManager();
+	private Map<Integer, Land> cityList;
+	
+	cityManager(){
+		cityList = new HashMap<Integer,Land>();
+	}
+	public static landManager getInstance()
+	{
+		return manager;
+	}
+	
+	public void add(int number, Land city) 
+	{
+		this.cityList.put(number, city);
+	}
+	public void remove(int number) 
+	{
+		this.cityList.remove(number);
+	}
+	public Map<Integer,Land> list()
+	{
+		return cityList;
+	}
+}

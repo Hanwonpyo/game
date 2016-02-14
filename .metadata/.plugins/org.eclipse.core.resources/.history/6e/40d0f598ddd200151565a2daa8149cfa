@@ -1,0 +1,14 @@
+package game;
+
+public class cityManager {
+	
+	private static cityManager manager=new cityManager();
+	
+	cityManager(){
+		userList = new HashMap<int,City>();
+	}
+	public static cityManager getInstance()
+	{
+		return manager;
+	}
+}

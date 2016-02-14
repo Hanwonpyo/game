@@ -1,0 +1,16 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class cityFactoryTest {
+
+	@Test
+	public void makeCitytest() {
+		for(char i='A';i<='L';i++) {
+			
+		}
+	}
+
+}

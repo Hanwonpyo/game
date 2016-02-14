@@ -1,0 +1,7 @@
+package game;
+
+import javax.swing.JButton;
+
+public class Island extends JButton implements specialLand{
+	
+}

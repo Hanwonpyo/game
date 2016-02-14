@@ -1,0 +1,28 @@
+package game;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class cityManager {
+	
+	private static cityManager manager=new cityManager();
+	private Map<Integer, City> cityList;
+	
+	cityManager(){
+		cityList = new HashMap<Integer,City>();
+	}
+	public static cityManager getInstance()
+	{
+		return manager;
+	}
+	public void add(Socket socket, User user) {
+		this.userList.put(socket, user);
+	}
+	public void remove(Socket socket) {
+		this.userList.remove(socket);
+	}
+	public Map<Socket,User> list()
+	{
+		return userList;
+	}
+}

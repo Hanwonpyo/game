@@ -1,0 +1,9 @@
+
+public class CityInfoGUI {
+	
+	CityInfoGUI(City city)
+	{
+		
+		
+	}
+}

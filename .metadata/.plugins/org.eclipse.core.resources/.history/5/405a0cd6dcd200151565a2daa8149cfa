@@ -1,0 +1,28 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import game.cityFactory;
+
+public class cityTest {
+
+	cityFactory factory;
+	@BeforeClass
+	public void setUpBeforeClass() throws Exception
+	{
+		factory=new cityFactory();
+	}
+	@Test
+	public void getNametest() {
+		for(char c='A';c<='L';c++) { 
+			char temp=(factory.makeCity(c)).getName().charAt(0);
+			assertEquals(temp,c);
+			
+		}
+		
+	}
+
+}

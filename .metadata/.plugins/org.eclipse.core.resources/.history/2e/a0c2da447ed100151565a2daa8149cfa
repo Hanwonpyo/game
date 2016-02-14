@@ -1,0 +1,15 @@
+
+public class User {
+	private String name;
+	private int money;
+	private int location;
+	
+	public int getMoney()
+	{
+		return money;
+	}
+	public void setMoney(int money)
+	{
+		this.money+=money;
+	}	
+}

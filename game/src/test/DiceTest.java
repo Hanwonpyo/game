@@ -1,0 +1,21 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import java.util.Random;
+
+import org.junit.Test;
+
+import game.Dice;
+
+public class DiceTest {
+
+	@Test
+	public void rollDicetest()
+	{
+		Dice dice=new Dice();
+		dice.rollDice();
+		assertTrue(dice.getNumber()<=6 && dice.getNumber()>=1);
+	}
+
+}

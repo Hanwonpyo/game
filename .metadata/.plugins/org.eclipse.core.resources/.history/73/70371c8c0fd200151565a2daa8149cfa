@@ -1,0 +1,26 @@
+package game;
+
+public class City {
+	
+	private String name;
+	private int cost;
+	private int building;
+	private User owner;
+	
+	public String getName()
+	{
+		return name;
+	}
+	public int getCost()
+	{
+		return cost;
+	}
+	public int getBuilding()
+	{
+		return building;
+	}
+	private User getOwner()
+	{
+		return owner;
+	}
+}

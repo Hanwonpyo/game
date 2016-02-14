@@ -1,0 +1,10 @@
+package game;
+
+public class CityH extends City{
+
+	CityH(String name)
+	{
+		cost=10;
+		super(name);
+	}
+}

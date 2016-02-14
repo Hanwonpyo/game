@@ -1,0 +1,7 @@
+
+public class setGame {
+	
+	Dice A=new Dice();
+	Dice B=new Dice();
+	
+}

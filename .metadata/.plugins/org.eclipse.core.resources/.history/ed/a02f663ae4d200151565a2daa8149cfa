@@ -1,0 +1,7 @@
+package game;
+
+public interface specialLand {
+	
+	public void run();
+
+}

@@ -1,0 +1,36 @@
+package game;
+
+import javax.swing.JButton;
+
+public class City extends JButton{
+	
+	String name;
+	int cost;
+	int building;
+	User owner;
+	public Button(String string) {
+		// TODO Auto-generated constructor stub
+	}
+	public City(String string) {
+		// TODO Auto-generated constructor stub
+		super(name);
+		building=0;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	public int getCost()
+	{
+		return cost;
+	}
+	public int getBuilding()
+	{
+		return building;
+	}
+	private User getOwner()
+	{
+		return owner;
+	}
+}

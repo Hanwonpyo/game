@@ -1,0 +1,13 @@
+package game;
+
+import javax.swing.JButton;
+
+public class Island extends JButton implements specialLand{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

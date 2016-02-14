@@ -1,0 +1,60 @@
+package game;
+
+public class cityFactory {
+	
+	public City makeCity(char c)
+	{
+		City city = null;
+		
+		switch(c) {
+			case 'A' :
+				city=new CityA("A");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'B' :
+				city=new CityB("B");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'C' :
+				city=new CityC("C");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'D' :
+				city=new CityD("D");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'E' :
+				city=new CityE("E");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'F' :
+				city=new CityF("F");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'G' :
+				city=new CityG("G");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'H' :
+				city=new CityH("H");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'I' :
+				city=new CityI("I");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'J' :
+				city=new CityJ("J");
+				cityManager.getInstance().add(0, city);
+				break;
+			case 'K' :
+				city=new CityK("K");
+				break;
+			case 'L' :
+				city=new CityL("L");
+				break;
+		}
+		return city;
+		
+	}
+}

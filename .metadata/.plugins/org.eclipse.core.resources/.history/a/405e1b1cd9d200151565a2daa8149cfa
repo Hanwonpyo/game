@@ -1,0 +1,49 @@
+package game;
+
+public class cityFactory {
+	
+	public City makeCity(char c)
+	{
+		City city = null;
+		switch(n) {
+			case 1 :
+				city=new CityA("A");
+				break;
+			case 2 :
+				city=new CityB("B");
+				break;
+			case 3 :
+				city=new CityC("C");
+				break;
+			case 4 :
+				city=new CityD("D");
+				break;
+			case 5 :
+				city=new CityE("E");
+				break;
+			case "F" :
+				city=new CityF("F");
+				break;
+			case "G" :
+				city=new CityG("G");
+				break;
+			case "H" :
+				city=new CityH("H");
+				break;
+			case "I" :
+				city=new CityI("I");
+				break;
+			case "J" :
+				city=new CityJ("J");
+				break;
+			case "K" :
+				city=new CityK("K");
+				break;
+			case "L" :
+				city=new CityL("L");
+				break;
+		}
+		return city;
+		
+	}
+}

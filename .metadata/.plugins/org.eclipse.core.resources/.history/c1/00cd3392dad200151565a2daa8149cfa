@@ -1,0 +1,23 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import game.cityFactory;
+
+public class cityTest {
+
+	cityFactory factory;
+	@BeforeClass
+	public static void setUpFactory() throw Exception
+	{
+		factory=new cityFactory();
+	}
+	@Test
+	public void getNametest() {
+		
+	}
+
+}

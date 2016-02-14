@@ -1,0 +1,10 @@
+package game;
+
+public class CityA extends City {
+	
+	CityA()
+	{
+		name="A";
+		cost=10;
+	}
+}

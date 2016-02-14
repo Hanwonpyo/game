@@ -1,0 +1,5 @@
+package game;
+
+public class startPoint extends JButton implements specialLand{
+
+}

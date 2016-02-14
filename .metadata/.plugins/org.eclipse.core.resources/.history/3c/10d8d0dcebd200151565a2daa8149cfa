@@ -1,0 +1,89 @@
+package game;
+
+public class Game {
+	
+	User A,B;
+	Dice firstDice,secondDice;
+	int distance;
+
+	public void setting()
+	{
+		cityFactory factory=new cityFactory();
+		for(char c='A';c<='L';c++)
+			factory.makeCity(c);
+		
+		this.makingMap();
+		
+		A=new User();
+		B=new User();
+		A.setMoney(200);
+		B.setMoney(200);
+		
+		firstDice=new Dice();
+		secondDice=new Dice();	
+	}
+	public void playing()
+	{
+		while(A.getMoney()>0 && B.getMoney()>0) {
+			//UserA 중앙에 턴 메세지 출력
+			//rolling 버튼 누르면
+			
+			//더블나왔을경우 do while
+			//int count>2 setlocation=2;
+			//무인도 0;
+			firstDice.rollDice();
+			secondDice.rollDice();
+			distance=firstDice.getNumber()+
+					secondDice.getNumber();
+			A.setLocation(distance);
+			City city_at_A;
+			city_at_A=cityManager.getInstance().list().get(A.getLocation());
+			if(city_at_A.getOwner()==A || city_at_A.getOwner()==null) {
+				//무인도나 시작점,우주여행일 경우 break;
+				//select();
+				//when buying
+				if(city_at_A.getbuildingCount()<3) {
+					if((A.getMoney()-city_at_A.getCost())>0) {
+						city_at_A.setOwner(A);
+						A.setMoney(-city_at_A.getCost());
+						city_at_A.addbuilingCount();
+					}
+					else 
+				}
+				else 
+			}
+			if(city_at_A.getOwner()==B) {
+				A.setMoney(-city_at_A.getCost());
+				B.setMoney(+city_at_A.getCost());
+			}			
+			//UserB
+			firstDice.rollDice(); 
+			secondDice.rollDice();
+			distance=firstDice.getNumber()+
+					secondDice.getNumber();
+			B.setLocation(distance);
+			City city_at_B;
+			city_at_B=cityManager.getInstance().list().get(B.getLocation());
+			if(city_at_B.getOwner()==B || city_at_B.getOwner()==null) {
+				//select();
+				if(city_at_B.getbuildingCount()<3) {
+					if((B.getMoney()-city_at_B.getCost())>0) {
+						city_at_A.setOwner(B);
+						B.setMoney(-city_at_B.getCost());
+						city_at_B.addbuilingCount();
+					}
+				}
+			}
+			if(city_at_B.getOwner()==A) {
+				B.setMoney(-city_at_A.getCost());
+				A.setMoney(+city_at_A.getCost());
+			}
+		}
+		
+	}
+	
+	public void makingMap()
+	{
+		
+	}
+}

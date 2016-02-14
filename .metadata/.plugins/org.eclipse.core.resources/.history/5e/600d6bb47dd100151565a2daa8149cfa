@@ -1,0 +1,11 @@
+
+public class User {
+	private String name;
+	private int money;
+	
+	public int getMoney()
+	{
+		return money();
+	}
+	
+}

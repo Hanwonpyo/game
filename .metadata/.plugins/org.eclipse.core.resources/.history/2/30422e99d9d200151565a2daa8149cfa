@@ -1,0 +1,11 @@
+package game;
+
+public class CityA extends City {
+	
+	CityA(String name)
+	{
+		System.out.println("A");
+		super(name);
+		cost=10;
+	}
+}

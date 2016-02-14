@@ -1,0 +1,8 @@
+package game;
+
+public class CityJ extends City{
+	CityJ()
+	{
+		cost=37;
+	}
+}
