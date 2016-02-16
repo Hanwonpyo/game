@@ -1,0 +1,19 @@
+package game;
+
+import javax.swing.JFrame;
+
+public class CityInfoGUI extends JFrame{
+	
+	CityInfoGUI(Land land)
+	{
+		this.add(land.getName());
+		this.add(land.getCost());
+		this.add(land.getOwner());
+		this.add(land.getbuildingCount());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 365, 392);
+		setVisible(true);
+		
+		
+	}
+}

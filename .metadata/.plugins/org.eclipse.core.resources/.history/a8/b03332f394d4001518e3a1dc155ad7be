@@ -1,0 +1,40 @@
+package game;
+
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class User extends JFrame implements ActionListener{
+
+	private JPanel panel_main;
+	private JPanel panel_center;
+	private JTextArea messageArea;
+	private JLabel []label_list=new JLabel[10];
+	private JButton button_rolling=new JButton("Roll");
+	private JButton []button_city=new JButton[16];
+	
+	private void setButton()
+	{
+		for(int i=0;i<16;i++) {
+			button_city[i]=(landManager.getInstance().list().get(i));
+			button_city[i].addActionListener(this);
+		}
+		button_rolling.addActionListener(this);
+		
+	}
+	public void makingGUI()
+	{
+		setButton();
+		setTextArea();
+		setPanel();
+		setLabel();
+		makingMap();
+		this.add(panel_main);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 365, 392);
+		setVisible(true);
+	}

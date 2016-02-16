@@ -1,0 +1,50 @@
+package game;
+
+import javax.swing.JButton;
+
+public class guiController {
+
+	private mapGUI gui;
+	private boolean check_roll;
+	private boolean check_buy;
+	private static guiController control=new guiController();
+	public static guiController getInstance()
+	{		
+		if(control==null)
+			control = new guiController();
+		return control;
+	}
+	public void setMap(mapGUI gui)
+	{
+		this.gui=gui;
+	}
+	public void Land_info(Land land)
+	{
+		CityInfoGUI infoGUI=new CityInfoGUI(land);
+		//infoGUI.dispose();
+	}
+	public void roll_check(boolean check)
+	{
+		control.check_roll=check;
+	}
+	public boolean is_roll()
+	{
+		return control.check_roll;
+	}
+	public void buy_check(boolean check)
+	{
+		check_roll=check;
+	}
+	public boolean is_buying()
+	{
+		return check_roll;
+	}
+	/*
+	public void Select(Land land) {
+		//gui.modfiyButton(land);
+	}
+	*/
+	public void turnOutput(String string) {
+		gui.turnMessage(string);
+	}
+}

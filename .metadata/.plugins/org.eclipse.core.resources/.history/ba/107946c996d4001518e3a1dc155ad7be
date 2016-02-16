@@ -1,0 +1,53 @@
+package game;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class userGUI extends JFrame{
+
+	private JPanel panel_A;
+	private JPanel panel_B;
+	private JLabel label_A;
+	private JLabel label_B;
+	private JTextArea info_A=new JTextArea();
+	private JTextArea info_B=new JTextArea();
+	
+	public void makingGUI()
+	{
+		setLabel();
+		setPanel();
+		this.setLayout(new GridLayout(1,2));
+		this.add(panel_A);
+		this.add(panel_B);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 365, 392);
+		setVisible(true);
+	}
+	private void setPanel()
+	{
+		panel_A=new JPanel();
+		panel_B=new JPanel();
+		panel_A.setLayout(new GridLayout(2,1));
+		panel_B.setLayout(new GridLayout(2,1));
+		panel_A.add(label_A);
+		panel_A.add(info_A);
+		panel_B.add(label_B);
+		panel_B.add(info_B);
+	}
+	private void setLabel()
+	{
+		label_A=new JLabel("player A Info");
+		label_B=new JLabel("player B Info");
+	}
+	public void updateInfo(User user)
+	{
+		info_A.setText(String.valueOf(user.getMoney()));
+		info_B.setText(String.valueOf(user.getMoney()));
+	}
+}

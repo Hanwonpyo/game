@@ -1,0 +1,10 @@
+package game;
+
+public class CityInfoGUI extends JFrame{
+	
+	CityInfoGUI(Land land)
+	{
+		
+		
+	}
+}

@@ -1,0 +1,26 @@
+package game;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+public class CityInfoGUI extends JFrame{
+	
+	private JTextArea infoArea=new JTextArea();
+	CityInfoGUI(Land land)
+	{
+		String cost;
+		String buildingCount;
+		infoArea.setLayout(new GridLayout(4,1));
+		infoArea.append(land.getName());
+		infoArea.append(land.getCost());
+		infoArea.append(land.getOwner().getName());
+		infoArea.append(land.getbuildingCount());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 365, 392);
+		setVisible(true);
+		
+		
+	}
+}

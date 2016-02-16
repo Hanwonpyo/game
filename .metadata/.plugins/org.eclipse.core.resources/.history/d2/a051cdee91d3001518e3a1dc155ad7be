@@ -1,0 +1,67 @@
+package game;
+
+public class landFactory {
+	
+	public Land makeLand(int n)
+	{
+		Land land = null;
+		
+		switch(n) {
+			case 0:
+				land=new startPoint("startPoint");
+			case 1 :
+				land=new CityA("A");
+				break;
+			case 2 :
+				land=new CityB("B");
+				break;
+			case 3 :
+				land=new CityC("C");
+				break;
+			case 4 :
+				land=new Island("Island");
+			case 5 :
+				land=new CityD("D");
+				break;
+			case 6 :
+				land=new CityE("E");
+				break;
+			case 7 :
+				land=new CityF("F");
+				break;
+			case 8 :
+				land=new CityG("G");
+				break;
+			case 9 :
+				land=new CityH("H");
+				break;
+			case 10 :
+				land=new CityI("I");
+				break;
+			case 10 :
+				land=new CityJ("J");
+				break;
+			case 11 :
+				land=new CityK("K");
+				break;
+			case 12 :
+				land=new CityL("L");
+				break;
+		}
+		this.addtoList(c,land);
+		
+		return land;	
+	}
+	
+	public void addtoList(char name,Land land)
+	{
+		for(char c='A';c<='L';c++) 
+		{
+			if(c==name) {
+				int number=(c-'A');
+				landManager.getInstance().add(0, land);
+				break;
+			}
+		}
+	}
+}

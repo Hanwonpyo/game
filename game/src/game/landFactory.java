@@ -2,60 +2,71 @@ package game;
 
 public class landFactory {
 	
-	public Land makeLand(char c)
+	public Land makeLand(int n)
 	{
 		Land land = null;
 		
-		switch(c) {
-			case 'A' :
+		switch(n) {
+			case 0:
+				land=new startPoint("Start");
+				break;
+			case 1 :
 				land=new CityA("A");
 				break;
-			case 'B' :
+			case 2 :
 				land=new CityB("B");
 				break;
-			case 'C' :
+			case 3 :
 				land=new CityC("C");
 				break;
-			case 'D' :
+			case 4 :
+				land=new Island("Island");
+				break;
+			case 5 :
 				land=new CityD("D");
 				break;
-			case 'E' :
+			case 6 :
 				land=new CityE("E");
 				break;
-			case 'F' :
+			case 7 :
 				land=new CityF("F");
 				break;
-			case 'G' :
+			case 8 :
 				land=new CityG("G");
 				break;
-			case 'H' :
+			case 9 :
 				land=new CityH("H");
 				break;
-			case 'I' :
+			case 10 :
 				land=new CityI("I");
 				break;
-			case 'J' :
+			case 11 :
 				land=new CityJ("J");
 				break;
-			case 'K' :
+			case 12 :
+				land=new spaceTravel("Space");
+				break;
+			case 13 :
 				land=new CityK("K");
 				break;
-			case 'L' :
+			case 14 :
 				land=new CityL("L");
 				break;
+			case 15 :
+				land=new CityM("M");
+				break;
 		}
-		this.addtoList(c,land);
+		this.addtoList(n,land);
 		
 		return land;	
 	}
 	
-	public void addtoList(char name,Land land)
+	public void addtoList(int n,Land land)
 	{
-		for(char c='A';c<='L';c++) 
+		for(int i=0;i<16;i++) 
 		{
-			if(c==name) {
-				int number=(c-'A');
-				landManager.getInstance().add(0, land);
+			if(i==n) {
+				landManager.getInstance().add(i, land);
 				break;
 			}
 		}

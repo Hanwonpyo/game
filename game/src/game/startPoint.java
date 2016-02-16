@@ -5,7 +5,7 @@ import javax.swing.JButton;
 public class startPoint extends Land implements specialLand{
 
 	public startPoint(String name) {
-		super("startPoint");
+		super("Start");
 		// TODO Auto-generated constructor stub
 	}
 

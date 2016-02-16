@@ -1,0 +1,40 @@
+package game;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class UserGUI extends JFrame{
+
+	private JPanel panel_A;
+	private JPanel panel_B;
+	private JTextArea info_A=new JTextArea();
+	private JTextArea info_B=new JTextArea();
+	private JLabel label_A=new JLabel("player A Info");
+	private JLabel label_B=new JLabel("player B Info");
+	
+	public void makingGUI()
+	{
+		setButton();
+		setTextArea();
+		setPanel();
+		setLabel();
+		makingMap();
+		this.add(panel_main);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 365, 392);
+		setVisible(true);
+	}
+	private void setPanel()
+	{
+		panel_A=new JPanel();
+		panel_B=new JPanel();
+		panel_A.setLayout(new GridLayout(2,1));
+		panel_B.setLayout(new GridLayout(2,1));
+	}
+}

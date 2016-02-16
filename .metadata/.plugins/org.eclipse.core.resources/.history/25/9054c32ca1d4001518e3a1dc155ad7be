@@ -1,0 +1,11 @@
+package game;
+
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+
+public class TravelGUI extends JFrame implements ActionListener{
+
+	JLabel label_location=new JLabel("WHERE TO GO");
+	JTextField text_location=new JTextField();
+	
+}

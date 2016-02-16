@@ -5,7 +5,7 @@ import javax.swing.JButton;
 public class Island extends Land implements specialLand{
 
 	public Island(String name) {
-		super("Island");
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 

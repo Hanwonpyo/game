@@ -1,0 +1,15 @@
+package game;
+
+public class main {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		Game game=new Game();
+		game.setting();
+		mapGUI gui=new mapGUI();
+		gui.makingGUI();
+		guiController.getInstance().setMap(gui);
+		game.playing();
+	}
+
+}

@@ -6,16 +6,17 @@ import java.util.Map;
 public class landManager {
 	
 	private static landManager manager=new landManager();
-	private Map<Integer, Land> landList;
+	private Map<Integer,Land> landList;
 	
 	landManager(){
 		landList = new HashMap<Integer,Land>();
 	}
 	public static landManager getInstance()
-	{
+	{	
+		if(manager==null)
+			manager = new landManager();
 		return manager;
 	}
-	
 	public void add(int number, Land land) 
 	{
 		this.landList.put(number, land);

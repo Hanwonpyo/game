@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="land" key="selection"/>
+		<item value="Money" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="City"/>
-			<item value="cityList"/>
-			<item value="city="/>
-			<item value="user"/>
-			<item value="Socket"/>
-			<item value="&quot; "/>
-			<item value="case &quot;"/>
-			<item value="&apos;"/>
+			<item value="money"/>
+			<item value="cost"/>
+			<item value="-cost"/>
+			<item value="setText"/>
+			<item value="island"/>
+			<item value="add"/>
+			<item value="this.add"/>
+			<item value="at_A"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="append"/>
+			<item value="infoArea.add"/>
+			<item value="at_user"/>
 			<item value="land"/>
 			<item value="landList"/>
 			<item value="land="/>
 			<item value="City"/>
-			<item value="int"/>
-			<item value="&apos; "/>
-			<item value="case &apos;"/>
-			<item value="&quot;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
